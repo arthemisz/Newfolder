@@ -1,7 +1,3 @@
-"scripts": {
-    "build": "webpack",
-    "start": "webpack serve"
-}
 {
   "name": "taskflow-todo",
   "version": "1.0.0",
