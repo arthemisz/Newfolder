@@ -4,7 +4,7 @@
   "description": "Advanced Todo List with Webpack",
   "private": true,
   "scripts": {
-    "build": "webpack",
+   "build": "webpack --mode production --output-path dist --config webpack.config.js",
     "start": "webpack serve",
     "dev": "webpack serve"
   },
