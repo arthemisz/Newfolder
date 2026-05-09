@@ -22,12 +22,15 @@ let pendingDeleteCallback = null; // for confirm modal
 
 // ========== INITIALIZATION ==========
 function initializeApp() {
-  // Load from localStorage or seed default project
   const stored = loadProjects();
   if (stored && stored.length > 0) {
-    projects = stored;
+    // Rebuild project objects with their methods
+    projects = stored.map(projectData => {
+      const rebuiltProject = createProject(projectData.name, projectData.id);
+      rebuiltProject.todos = projectData.todos || [];
+      return rebuiltProject;
+    });
   } else {
-    // Create default project
     const defaultProject = createProject('My Tasks');
     projects.push(defaultProject);
     saveProjects(projects);
