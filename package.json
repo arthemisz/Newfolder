@@ -5,8 +5,9 @@
   "private": true,
   "scripts": {
   "build": "webpack --mode production --output-path dist --config webpack.config.js",
-    "start": "webpack serve",
-    "dev": "webpack serve"
+   "postbuild": "mkdir dist 2>nul || echo dist already exists",
+  "start": "webpack serve",
+  "dev": "webpack serve"
   },
   "dependencies": {
     "date-fns": "^2.30.0"
