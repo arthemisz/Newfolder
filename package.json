@@ -4,16 +4,9 @@
   "description": "Advanced Todo List with Webpack",
   "private": true,
   "scripts": {
-<<<<<<< HEAD
    "build": "webpack --mode production --output-path dist --config webpack.config.js",
     "start": "webpack serve",
     "dev": "webpack serve"
-=======
-  "build": "webpack --mode production --output-path dist --config webpack.config.js",
-   "postbuild": "mkdir dist 2>nul || echo dist already exists",
-  "start": "webpack serve",
-  "dev": "webpack serve"
->>>>>>> 7c0c6dcc1c66aa8cc6ed5b450dfaa7260e5e8257
   },
   "dependencies": {
     "date-fns": "^2.30.0"
